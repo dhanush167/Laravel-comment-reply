@@ -17,9 +17,33 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('tested');
+
+
+
+
+
+
+
+
 
 
 Route::resource('/comments','CommentsController');
 Route::resource('/replies','RepliesController');
 Route::post('/replies/ajaxDelete','RepliesController@ajaxDelete');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

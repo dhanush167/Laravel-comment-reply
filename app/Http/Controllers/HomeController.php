@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Comment;
 use Illuminate\Http\Request;
 
@@ -12,10 +13,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
 
     /**
      * Show the application dashboard.
@@ -25,6 +23,6 @@ class HomeController extends Controller
     public function index()
     {
         $comments = Comment::latest('created_at')->get();
-        return view('home', ['comments' => $comments]);
+        return view('tested', ['comments' => $comments]);
     }
 }

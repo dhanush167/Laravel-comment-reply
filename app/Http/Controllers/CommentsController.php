@@ -16,7 +16,7 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -44,7 +44,7 @@ class CommentsController extends Controller
                 'user_id' => Auth::user()->id
             ]);
 
-            return redirect()->route('home')->with('success','Comment Added successfully..!');
+            return redirect()->route('tested')->with('success','Comment Added successfully..!');
         }else{
             return back()->withInput()->with('error','Something wrong');
         }

@@ -43,7 +43,7 @@ class RepliesController extends Controller
                 'user_id' => Auth::user()->id
             ]);
 
-            return redirect()->route('home')->with('success','Reply added');
+            return redirect()->route('tested')->with('success','Reply added');
         }
 
         return back()->withInput()->with('error','Something wronmg');

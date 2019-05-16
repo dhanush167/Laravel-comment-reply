@@ -82,6 +82,15 @@
                     Laravel
                 </div>
 
+
+                @if (Route::has('login'))
+                        @auth
+                    <h3>yah yah !!! i am login</h3>
+                        @else
+                            <h3>oops !!!! i am  not login </h3>
+                            @endauth
+                @endif
+
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
